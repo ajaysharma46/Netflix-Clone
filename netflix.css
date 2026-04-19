@@ -1,0 +1,526 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:system-ui;
+    color: white;
+}
+
+button{
+    cursor: pointer;
+}
+#backimg{
+    background: url('netflixbg.png');
+    background-size: cover;
+    background-repeat:no-repeat;
+    height: 630px;
+    border-bottom: 8px solid #222
+}
+
+.background{
+    background: rgb(0,0,0,.7 );
+    background-image: linear-gradient(0.deg, rgba(0, 0, 0, 8), rgba(0, 0, 0,8 ));
+    height: 100.1%;
+}
+
+.navbar{
+    display: flex;
+    padding: 20px 150px;
+    margin-bottom: 100px;
+    margin-top: 0px;
+}
+
+.logo{
+    width: 10.4375rem;
+    height: 3.8125rem;
+    margin-right: auto;
+}
+#language{
+    margin-right: 1.375rem;
+    color: white;
+    border-radius: 5px;
+    background: transparent;
+    padding: 0 10px;
+    height: 40px;
+}
+
+option {
+    background-color: grey;
+}
+
+.signin{
+    background-color:#e50914;
+    font-size: 1rem;
+    padding: 0 20px;
+    border-radius: 5px;
+    color:white;
+    height: 40px;
+}
+
+.main {
+    text-align: center;
+    padding: 75px 20px;
+    width: fit-content;
+    margin: auto;
+    margin-top: -74px;
+    font-weight: 600;
+
+}
+ 
+.main h1 {
+    font-size: 7rem;
+    margin-bottom:10px ;
+    font-weight: bolder;
+}
+
+.main p {
+    font-size: 1.625rem;
+}
+
+.main h3 {
+    font-weight: 400;
+    margin-top: 27px;
+}
+
+.form {
+    display: flex;
+   
+}
+
+h3{
+    margin-bottom: 20px;
+    font-weight: 100;
+    margin-top: 10px;
+}
+
+.form div{
+    width: 100% ;
+    height: 70px;
+    position: relative;
+}
+
+.form input {
+    height: 100%;
+    width: 100%;
+}
+
+
+.input:focus {
+    outline: none;
+
+}
+
+.form button {
+    width: 250px;
+    background-color: rgba(229, 9, 20);
+    font-size: 1.875rem;
+}
+
+.form label {
+    position:absolute;
+    left: 10px;
+    color: grey;
+}
+
+@media (max-width: 1450px){
+    .main h1{
+         font-size:3.125rem;
+    }
+    .form div{
+        width: 450px;
+        height: 60px;
+    }
+    .form button{
+        width: 212px;
+        font-size:1.625rem;
+    }
+}
+
+@media (max-width: 950px){
+    .log{
+        width:100px;
+        height: 35px;
+    }
+    .form{
+        display: block;
+
+    }
+
+    .form div{
+        height: 48px;
+        margin: auto;
+        width: 100px;
+    }
+
+
+    .form button{
+        font-size: 1rem;
+        height: 40px;
+        width: 130px;
+        margin-top: 15px;
+    }
+    h3{
+        font-size: 1.625rem;
+        max-width:500px;
+         
+    }
+}
+
+@media (max-width:500px){
+    .main{
+        padding-bottom:0 ;
+    }
+    .main h1{
+        font-size: 1.7 5rem;
+    }
+    .main br {
+        display: none;
+
+    }
+    .main p, h3{
+        font-size: 1.12rem;
+    }
+    .navbar{
+        margin: 0;
+        padding: 20px 15px;
+    }
+
+    #backimg{
+        height: 485px;
+    }
+    .logo{
+        width: 88px;
+
+    }
+    .navbar #ilanguage{
+        width: 100px;
+        height: 28px;
+    }
+    .signin {
+        width: 60px;
+        height: 28px;
+        padding: 2px;
+    }
+    
+}
+
+
+
+
+.oval {
+    position: absolute;
+    bottom: -35px; /* Pulls it halfway down into the next section */
+    width: 100%;   /* Make it wider than 100% to ensure the curve looks natural */
+      /* Center the oversized width */
+    height: 87px;
+     background: radial-gradient(
+        circle at 47% 10%, 
+        #111832 0%,    /* Light blue in the very center */
+         #05060a 90%,  /* Fading to your dark color */
+        #05060a 100%   /* Deep black at the very corners */
+    );
+    
+    border-radius: 50%;
+    border-top: 4px solid #d62976;
+   
+    box-shadow: 0px -5px 15px rgba(214, 41, 118, 0.3);
+   
+    z-index: 10;   /* Keeps it above the background */
+}
+
+
+.containerdown{
+    z-index: 11;
+    width: 100%;
+  
+    /* This creates the 'light' in the center and darkness at the edges */
+    background: radial-gradient(
+        circle at 47% 10%, 
+        #111832 0%,    /* Light blue in the very center */
+        #05060a 70%,   /* Fading to your dark color */
+        #000000 100%   /* Deep black at the very corners */
+    );
+    position: relative;
+    overflow: hidden;
+    bottom: 27px;
+}
+
+.Tv{
+    
+    border-bottom: 9px solid #222;
+    padding: 70px 45px;
+}
+
+.container{
+    display: flex;
+    max-width:1100px;
+    align-items: center;
+    justify-content: center;
+    margin:0 auto;
+
+}
+
+h2{
+    font-size: 3.125rem;
+}
+
+.tvclip{
+    width: 45%;
+    position: relative;
+    max-width: 600px;
+    margin:auto;
+}
+
+.description{
+    width: 50%;
+}
+
+.description p {
+    font-size: 1.625rem;
+}
+
+.tvclip{
+    width: 100%;
+    z-index: 10;
+    max-width: 600px;
+    position: relative;
+    
+}
+
+#Tvvideo{
+    position: absolute;
+    top: 48%;
+    left: 25%;
+    transform: translate(-50%,-50%);
+    width: 87%;
+    height: 55; 
+}
+
+ :root {
+  --bg-color: #050505;
+  --card-width: 200px;
+  --gap: 40px; /* Space for the numbers */
+}
+
+
+.trending-container {
+  padding: 30px;
+  box-sizing: border-box;
+  overflow: hidden; /* Clips the track */
+  margin: 0 9vw;
+}
+
+
+.headings{
+  margin-left: 10px;
+  font-size:xx-large;
+}
+
+.slider-wrapper {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  
+}
+
+.image-track {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  /* Remove justify-content: space-evenly */
+  gap: 40px; /* Use a fixed gap for easier math */
+  padding: 20px 0px; /* Consistent side padding 60 */
+
+}
+
+
+.card {
+  position: relative;
+  /* Use flex-shrink to prevent cards from squishing */
+  flex: 0 0 var(--card-width); 
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  padding: 0px;
+  z-index: 10; /* 1 */
+}
+
+.card img {
+  width: 100%; /* Use full width of the card container */
+  border-radius: 4px;
+  display: block;
+}
+
+.arrowcon{
+  height: 100px;
+  width: 50px;
+  background: #e22a2a;
+  display: inline;
+}
+
+/* Big Number Styling */
+.rank-number {
+  position: absolute;
+  left: -15px; /* Pulls number to the left of the image */
+  bottom: -10px;
+  font-size: 90px;
+  font-weight: 900;
+  color: var(--bg-color);
+  -webkit-text-stroke: 2px #ffffff; /* Outlined look */
+  line-height: 1.5;
+  z-index: 1; /* Behind the image */
+  transition: all 0.3s ease;
+}
+
+/* Hover Animation */
+.card:hover {
+  transform: scale(1.1);
+  z-index: 15; /* Brings zoomed card to front */
+}
+
+.card:hover .rank-number {
+  -webkit-text-stroke: 2px #fff; /* Highlights number on hover */
+}
+
+/* Navigation Buttons */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  
+  transform: translateY(-50%);
+ background-color: rgba(26, 26, 26,1);
+     height: 7rem;
+    width: 2rem;
+    border-radius: 0.5rem;
+
+    border: none;
+  color: white;
+  border: none;
+  padding: 20px 10px;
+  cursor: pointer;
+  font-weight: 900;
+  font-size: 1.5rem;
+  z-index: 100;
+  transition: opacity 0.3s ease;
+  text-shadow: 0 0 40px 10px #fff;
+  display: none; /* Logic to show only when needed can be added */
+  
+}
+
+.next-btn { right: -27px; display: block; }
+.prev-btn { left: -27px; }
+
+/* Tablet & Mobile Adjustments */
+@media (max-width: 1024px) {
+  :root {
+    --card-width: 160px;
+    --gap: 30px;
+  }
+  .rank-number {
+    font-size: 80px;
+    left: -20px;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --card-width: 130px;
+    --gap: 25px;
+  }
+
+  .trending-container {
+    padding: 20px;
+  }
+
+  /* On mobile, we often want native touch scrolling instead of buttons */
+  .slider-wrapper {
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .image-track {
+    gap: var(--gap);
+    padding-left: 20px; /* Gives the first number some room */
+  }
+
+  .nav-btn {
+    display: none !important; /* Hide buttons on small touch devices */
+  }
+
+  .rank-number {
+    font-size: 60px;
+    left: -15px;
+    -webkit-text-stroke: 1px #555;
+  }
+  
+  /* Reduce scale on mobile to prevent overlapping issues on small screens */
+  .card:hover {
+    transform: scale(1.05);
+  }
+}
+    
+.reasons-container{
+   margin: 0 140px;
+}
+
+.title {
+  margin-bottom: 20px;
+
+}
+
+/* Base Mobile Layout (Image 2) */
+.grid {
+  display: flex;
+  flex-direction: column; /* Stacked vertically */
+  gap: 20px;
+  margin-top: 40px;
+}
+.join_card {
+  /* The base is dark blue/black, with a reddish-pink glow from the bottom right */
+ 
+  background: radial-gradient(
+    circle at bottom right, 
+    #411031 0%,   /* Dark magenta/reddish tint */
+    #13132a 60%,  /* Deep navy/blue base */
+    #0f0f1a 100%  /* Almost black */
+  );
+  
+  /* Adding a subtle purple border helps define the edges */
+  border: 1px solid rgba(128, 0, 128, 0.2); 
+      
+  border-radius: 16px;
+  padding: 24px;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden; /* Keeps the glow inside the rounded corners */
+}
+.join_card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.join_card p {
+  color: #ccc;
+  font-weight: 100;
+  font-size: 1rem;
+  line-height: 1.4;
+
+}
+
+.icon {
+  width: 60px;
+  align-self: flex-end; /* Pushes icon to the bottom right */
+}
+
+/* Desktop Layout (Image 1) */
+@media (min-width: 1024px) {
+  .grid {
+    flex-direction: row; /* Horizontal row */
+  }
+
+  .join_card {
+    flex: 1; /* Makes all join_cards equal width */
+    min-height: 300px; /* Taller join_cards for desktop */
+  }
+}

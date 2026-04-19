@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="netflix.css">
+</head>
+<body>
+    <div id="backimg">
+        <div class="background">
+            <div class="navbar">
+                <img src="logo.png" class="logo" alt="">
+                <select name="language" id="language">
+                    <option>English</option>
+                    <option>polish</option>
+                    <option>german</option>
+                </select>
+                <button class="signin">Sign In</button>
+            </div>
+            <div class="main">
+                <h1>Unlimited movies, TV <br> shows, and more</h1>
+                <p>Watch anywhere. Cancel anytime </p>
+
+                <h3>Ready to watch? Enter your email to create or restart your membership.</h3>
+                
+                <form class="email" >
+                    <div class="form">
+                        <div>
+                    
+                        <input type="text" name="email" id="email">
+                        <label for="email">Email Address</label>
+                    </div>
+                    <button class="getstartted">Get started</button>
+                </div>
+            </form>
+
+        </div>
+        <div class="ovalpar">
+            <div class="oval"></div>
+        </div>
+    </div>
+    <div class="containerdown">
+         <div class="trending-container">
+  <h2 class="headings">Trending Now</h2>
+  <div class="slider-wrapper">
+   
+       <button class="nav-btn next-btn" onclick="slide(1)">&#10095;</button>
+       <button class="nav-btn prev-btn" onclick="slide(-1)">&#10094;</button>
+
+      <div class="image-track" id="track">
+      <div class="card">
+        <span class="rank-number">1</span>
+        <img src=https://occ-0-2186-2164.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABRkXM8hFLe8CWQIE_G1c9voWyN359tVygK3KQSozXU2E7OODrX_x-6senbaphRMFjlSBuZVWPI_4bMBTqJQocNrxu6Mxzy-bo3ULy523.webp?r=8cd" alt="Poster 1">
+      </div>
+      <div class="card">
+        <span class="rank-number">2</span>
+        <img src="https://occ-0-2186-2164.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABe3NxIeT-EiMKJriLsq8x8p__gp0aw4_RllFLL-j1x3SJ12_XCDqpO5f1lI-f9T2KvZ67PmXoLhrx691oMEpwq5_hu6u5Xu44P17UMZa.webp?r=05f" alt="Poster 2">
+      </div>
+      <div class="card">
+        <span class="rank-number">3</span>
+        <img src="https://occ-0-2186-2164.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABZBz0clOwylytxr_IGH7ahR6Z4njfU3qU5F2p1M2NoeJss21QGAepbRQZb0IPzmj54m9Z8DRXunTBl9gVu8gY-vpZJTkdJySJGApQknK.webp?r=13c" alt="Poster 2">
+      </div>
+      <div class="card">
+        <span class="rank-number">4</span>
+        <img src="https://occ-0-2186-2164.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABUcQs_WZr9J-df5c-sTvcbloKKiKq1Eg7fi1uqvBbKOTn2uXrVs7fVC2YeGyk-5MmGRcIykGb24f_M0z-ylS55rbz0fr31LnQoLnfTCt.webp?r=3ea" alt="Poster 2">
+      </div>
+      <div class="card">
+        <span class="rank-number">5</span>
+        <img src="https://occ-0-2186-2164.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABXQFv50zSjOVXZPCsDJ7nzrq54UudMMfo1O_bNzAxF_-0eorwvgJCwiEs4_wV91AhJfLfwbewgA1-8svt3ebQJkn8WyXIVGYdUAxA9vnnC354LKwFqTkCn0zR7cXM0yrQ4Ua18nljQ.webp?r=cca" alt="Poster 2">
+      </div>
+      <div class="card">
+        <span class="rank-number">6</span>
+        <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABa0LjFhbaisBmYZlbuacJ64A_t4WKq7IjLibHD7w91e1eW19IZKh8GVeQNjlteMW545uWvbFI9oUPucnYYLj8z0guGdNUkDeXn9RbYSy.webp?r=090" alt="Poster 2">
+      </div>
+      
+      <div class="card">
+        <span class="rank-number">7</span>
+        <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABYEpB1yOguPpivhuxzxnMAKlf-veaR79eQd7x_3HoiHPpF8drzQNtn2YoNzOuCtwsWeuUMk6AVsfCMRRl-tSrEPUeHMn_8uCrph5CcPmVbc5McXsxq7cZQHNPEC4XJF1QsFrf1alTA.webp?r=df5" alt="Poster 2">
+      </div>
+      
+      <div class="card">
+        <span class="rank-number">8</span>
+        <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABeE0CbYnbZZwNsyWlKuFaOcxlaAmIloQmR9E6ei6sjJRSJtQItgz3bGbEm6LW24qKgk65ZHygVlDn1xxddW6NrhEoGnUYv7G84B6E029Y6lyU7IhCvf_lbaM156Ad1FOMx6JW2ti7g.webp?r=bf8" alt="Poster 2">
+      </div>
+      
+      <div class="card">
+        <span class="rank-number">9</span>
+        <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABXIpU6Lz9l0tvx3mTTW9sCAXNOOXjsxa8wjUw4_MYBkGihaBn3MPrw0JFMgJQxbIAQkoJWNszVs4bplO-V4nPKzunpoGtgWqulc-d0Ax37a46qv2bLPZrFo7ZmivdaWt5yd3h2nEdQ.webp?r=7e7" alt="Poster 2">
+      </div>
+      
+      <div class="card">
+        <span class="rank-number">10</span>
+        <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABbQ61AI1CopxM7ZqNgsazpWpDyG31F95dBlda1ZvKECjX2KMbosaVemDB7W9oq26WOg8lghsoKrNchXDTTgJjHqO8VF3aGoX7PjfyPP-.webp?r=12f" alt="Poster 2">
+      </div>
+      
+      </div>
+  </div>
+</div>
+
+  <section class="reasons-container">
+  <h2 class="headings">More reasons to join</h2>
+  <div class="grid">
+    <div class="join_card">
+      <div class="content">
+        <h3>Enjoy on your TV</h3>
+        <p>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
+      </div>
+      <img src="tv-icon.png" alt="TV icon" class="icon">
+    </div>
+
+    <div class="join_card">
+      <div class="content">
+        <h3>Download your shows to watch offline</h3>
+        <p>Save your favourites easily and always have something to watch.</p>
+      </div>
+      <img src="download-icon.png" alt="Download icon" class="icon">
+    </div>
+
+    <div class="join_card">
+      <div class="content">
+        <h3>Watch everywhere</h3>
+        <p>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
+      </div>
+      <img src="telescope-icon.png" alt="Watch icon" class="icon">
+    </div>
+
+    <div class="join_card">
+      <div class="content">
+        <h3>Create profiles for kids</h3>
+        <p>Send kids on adventures with their favourite characters in a space made just for them — free with your membership.</p>
+      </div>
+      <img src="kids-icon.png" alt="Kids icon" class="icon">
+    </div>
+    
+  </div>
+</section>
+    
+
+    </div>
+    <script src="netflix.js"></script>
+</body>
+</html>
