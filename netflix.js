@@ -32,3 +32,20 @@ function slide(direction) {
     document.querySelector('.prev-btn').style.display = currentPosition === 0 ? 'none' : 'block';
     document.querySelector('.next-btn').style.display = currentPosition <= maxScroll ? 'none' : 'block';
 }
+
+const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+accordionHeaders.forEach(header => {
+  header.addEventListener('click', () => {
+    const item = header.parentElement;
+    
+    // Optional: Close other items when opening a new one
+    /*
+    document.querySelectorAll('.accordion-item').forEach(otherItem => {
+      if (otherItem !== item) otherItem.classList.remove('active');
+    });
+    */
+
+    item.classList.toggle('active');
+  });
+});
