@@ -524,3 +524,63 @@ h2{
     min-height: 300px; /* Taller join_cards for desktop */
   }
 }
+
+.faq-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.accordion-item {
+  background-color: #2d2d2d;
+  margin-bottom: 8px;
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 20px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.accordion-header:hover {
+  background-color: #414141;
+}
+
+.icon {
+  font-size: 2rem;
+  transition: transform 0.3s;
+}
+
+/* The hidden content container */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  background-color: #2d2d2d;
+}
+
+.accordion-content p {
+  padding: 0 20px 20px 20px;
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* Active states */
+.accordion-item.active .accordion-content {
+  /* High enough value to accommodate any text, but transition handles the speed */
+  max-height: 500px; 
+}
+
+.accordion-item.active .icon {
+  transform: rotate(45deg); /* Turns + into x */
+}
