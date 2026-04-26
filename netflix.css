@@ -16,6 +16,10 @@ button{
     height: 630px;
     border-bottom: 8px solid #222
 }
+body{
+  background-color: #050505;
+}
+
 
 .background{
     background: rgb(0,0,0,.7 );
@@ -25,18 +29,24 @@ button{
 
 .navbar{
     display: flex;
-    padding: 20px 150px;
-    margin-bottom: 100px;
-    margin-top: 0px;
+    max-width: 80vw;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    height: 62px;
+    flex-wrap: wrap;
 }
 
 .logo{
-    width: 10.4375rem;
-    height: 3.8125rem;
-    margin-right: auto;
+    /* width: 10.4375rem; */
+    width: 114px;
+    position: relative;
+    /* height: 3.8125rem; */
+    /* margin-right: auto; */
+    z-index: 10;
 }
 #language{
-    margin-right: 1.375rem;
+    /* margin-right: 1.375rem; */
     color: white;
     border-radius: 5px;
     background: transparent;
@@ -62,7 +72,7 @@ option {
     padding: 75px 20px;
     width: fit-content;
     margin: auto;
-    margin-top: -74px;
+    margin-top: 10px;
     font-weight: 600;
 
 }
@@ -97,13 +107,25 @@ h3{
     width: 100% ;
     height: 70px;
     position: relative;
+    
 }
 
 .form input {
     height: 100%;
-    width: 100%;
+    width: 90%;
+    border: 1px solid grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: rgba(15, 15, 15, 0.5);
+   
 }
 
+.form label{
+  padding: 19px 30px;
+  color: white;
+}
 
 .input:focus {
     outline: none;
@@ -180,27 +202,27 @@ h3{
     .main p, h3{
         font-size: 1.12rem;
     }
-    .navbar{
+    /* .navbar{
         margin: 0;
         padding: 20px 15px;
-    }
+    } */
 
     #backimg{
         height: 485px;
     }
-    .logo{
+    /* .logo{
         width: 88px;
 
-    }
+    } */
     .navbar #ilanguage{
         width: 100px;
         height: 28px;
     }
-    .signin {
+    /* .signin {
         width: 60px;
         height: 28px;
         padding: 2px;
-    }
+    } */
     
 }
 
@@ -209,15 +231,15 @@ h3{
 
 .oval {
     position: absolute;
-    bottom: -35px; /* Pulls it halfway down into the next section */
+    bottom: -7%; /* Pulls it halfway down into the next section */
     width: 100%;   /* Make it wider than 100% to ensure the curve looks natural */
       /* Center the oversized width */
     height: 87px;
-     background: radial-gradient(
-        circle at 47% 10%, 
+ background: radial-gradient(
+        circle at 47% , 
         #111832 0%,    /* Light blue in the very center */
-         #05060a 90%,  /* Fading to your dark color */
-        #05060a 100%   /* Deep black at the very corners */
+        #05060a 110%,   /* Fading to your dark color */
+        #000000 0%   /* Deep black at the very corners */
     );
     
     border-radius: 50%;
@@ -525,13 +547,17 @@ h2{
   }
 }
 
+
+
 .faq-container {
-  max-width: 800px;
+  max-width: 82%;
   margin: 50px auto;
   padding: 0 20px;
+
 }
 
 .accordion-item {
+
   background-color: #2d2d2d;
   margin-bottom: 8px;
 }
@@ -555,7 +581,7 @@ h2{
   background-color: #414141;
 }
 
-.icon {
+.plus-icon {
   font-size: 2rem;
   transition: transform 0.3s;
 }
@@ -581,6 +607,157 @@ h2{
   max-height: 500px; 
 }
 
-.accordion-item.active .icon {
-  transform: rotate(45deg); /* Turns + into x */
+.accordion-item.active .plus-icon {
+  transform: rotate(45deg); /* Turns  into x */
+}
+
+.fourthcontainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.faq-container {
+  width: 93%; /* Adjusted to your specific width */
+  margin: 2rem 0;
+   
+}
+
+/* .faq-container h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+} */
+
+.accordion-item {
+  background-color: #2d2d2d;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 1.5rem 2rem;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem; /* Larger text */
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+
+.accordion-header:hover {
+  background-color: #414141;
+}
+
+/* Custom Thin Plus plus-icon */
+.plus-icon {
+  position: relative;
+  width: 24px;   /* Size of the plus-icon area */
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+/* Vertical and horizontal lines for the plus */
+.plus-icon::before,
+.plus-icon::after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  transition: transform 0.3s ease;
+}
+
+/* Horizontal line */
+.plus-icon::before {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px; /* Very thin thickness */
+  transform: translateY(-50%);
+}
+
+/* Vertical line */
+.plus-icon::after {
+  left: 50%;
+  top: 0;
+  height: 100%;
+  width: 1px; /* Very thin thickness */
+  transform: translateX(-50%);
+}
+
+/* Animation to 'X' */
+.accordion-item.active .plus-icon {
+  transform: rotate(45deg);
+}
+
+/* Content logic */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.5, 0, 0.1, 1);
+  background-color: #2d2d2d;
+  border-top: 1px solid black; /* Creates a slight separation when open */
+}
+
+.accordion-content p {
+  padding: 2rem;
+  margin: 0;
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 1000px; /* High enough for long descriptions */
+}
+
+.headingsfaq {
+  margin-left: 10px;
+  font-size:xx-large;
+  margin-bottom: 3%;
+}
+
+.footer{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+ background-color: #050505;
+ padding: 14px;
+}
+
+footer .questions{
+  padding:34px 14px;
+   color:rgba(255, 255, 255,0.7);
+}
+
+
+footer{
+
+  max-width: 79vw;
+  margin: auto;
+  height: 455px;
+}
+
+@media screen and (max-width:1300px){
+  .footer{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+ background-color: #050505;
+gap: 25px;
+}
+
+}
+
+ a {
+  font-size: 14px;
+  color:rgba(255, 255, 255,0.7);
+}
+
+.footer-item{
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
 }
