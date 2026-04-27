@@ -33,7 +33,7 @@ function slide(direction) {
     document.querySelector('.next-btn').style.display = currentPosition <= maxScroll ? 'none' : 'block';
 }
 
-const accordionHeaders = document.querySelectorAll('.accordion-header');
+   const accordionHeaders = document.querySelectorAll('.accordion-header');
 
 accordionHeaders.forEach(header => {
   header.addEventListener('click', () => {
@@ -48,4 +48,17 @@ accordionHeaders.forEach(header => {
 
     item.classList.toggle('active');
   });
+});
+
+const emailInput = document.querySelector("#email");
+const emailBox = document.querySelector(".emailbox");
+
+// When the user clicks into the input
+emailInput.addEventListener("focus", function() {
+  emailBox.style.borderColor = "white";
+});
+
+// When the user clicks away
+emailInput.addEventListener("blur", function() {
+  emailBox.style.borderColor = "transparent"; // or your original gray
 });
