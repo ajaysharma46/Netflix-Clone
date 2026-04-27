@@ -78,7 +78,7 @@ option {
 }
  
 .main h1 {
-    font-size: 7rem;
+    font-size: 2rem;
     margin-bottom:10px ;
     font-weight: bolder;
 }
@@ -491,10 +491,9 @@ h2{
 
 /* Base Mobile Layout (Image 2) */
 .grid {
-  display: flex;
-  flex-direction: column; /* Stacked vertically */
-  gap: 20px;
-  margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 .join_card {
   /* The base is dark blue/black, with a reddish-pink glow from the bottom right */
@@ -538,7 +537,11 @@ h2{
 /* Desktop Layout (Image 1) */
 @media (min-width: 1024px) {
   .grid {
-    flex-direction: row; /* Horizontal row */
+  
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+
   }
 
   .join_card {
@@ -760,4 +763,93 @@ gap: 25px;
   display: flex;
   flex-direction: column;
   gap: 23px;
+}
+
+.cta-container {
+  display: flex;
+  gap: 17px;
+  max-width: 1000px;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.input-group {
+  position: relative;
+  /* flex: 1;  */
+ width: 100%;
+
+}
+
+.input-group input {
+  width: 100%; /* This is the "magic" line */
+  padding: 25px 10px 10px 10px; /* Added more top padding for the label */
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid #808080;
+  color: white;
+  font-size: 16px;
+  border-radius: 4px;
+  outline: none;
+
+  box-sizing: border-box; /* Keeps padding inside the width */
+}
+
+.emailbox {
+  display: flex;
+  flex: 1; /* This lets it grow to fill available space */
+  min-width: 450px; /* Set your desired width here */
+  border: 2px solid transparent; 
+  padding: 1px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+  flex-shrink: 1;
+}
+
+
+/* The Label */
+.input-group label {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #b3b3b3;
+  transition: all 0.2s ease;
+  pointer-events: none; /* Prevents label from blocking clicks */
+}
+
+
+/* THE FIX: Keep label up when focused OR when text exists */
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+  top: 12px;
+  font-size: 12px;
+  font-weight: bold;
+ 
+}
+
+/* Second Image Layout: The White Highlight */
+/* .input-group input:focus {
+
+  
+} */
+
+/* Button Fix */
+.btn-get-started {
+  background-color: #e50914;
+  
+  color: white;
+  
+  padding: 15px 25px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  flex-shrink: 0; /* Keeps button size stable */
+  display: flex;
+  align-items: center;
+}
+.emailbox {
+  border: 2px solid transparent; /* Reserve the space so it doesn't jump */
+  transition: border-color 0.2s;
 }
