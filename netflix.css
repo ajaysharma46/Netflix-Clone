@@ -9,12 +9,12 @@
 button{
     cursor: pointer;
 }
-#backimg{
-    background: url('netflixbg.png');
-    background-size: cover;
-    background-repeat:no-repeat;
-    height: 630px;
-    border-bottom: 8px solid #222
+
+
+
+#backimg {
+    background: url('netflixbg.png') no-repeat center center/cover;  
+    border-bottom: 8px solid #222;
 }
 body{
   background-color: #050505;
@@ -74,11 +74,11 @@ option {
     margin: auto;
     margin-top: 10px;
     font-weight: 600;
-
+    
 }
  
 .main h1 {
-    font-size: 2rem;
+    font-size: 3rem;
     margin-bottom:10px ;
     font-weight: bolder;
 }
@@ -144,79 +144,55 @@ h3{
     color: grey;
 }
 
-@media (max-width: 1450px){
-    .main h1{
-         font-size:3.125rem;
-    }
-    .form div{
-        width: 450px;
-        height: 60px;
-    }
-    .form button{
-        width: 212px;
-        font-size:1.625rem;
-    }
+
+.oval{
+  top: 0px;
 }
 
-@media (max-width: 950px){
-    .log{
-        width:100px;
-        height: 35px;
-    }
-    .form{
-        display: block;
+ @media (max-width: 1450px){
 
+    .oval{
+      top: 520px;
     }
+} 
 
-    .form div{
-        height: 48px;
-        margin: auto;
-        width: 100px;
+ @media (max-width: 950px) {
+    .main h1 {
+        font-size: 2.5rem;
     }
-
-
-    .form button{
-        font-size: 1rem;
-        height: 40px;
-        width: 130px;
-        margin-top: 15px;
+     .oval{
+      top: 500px;
     }
-    h3{
-        font-size: 1.625rem;
-        max-width:500px;
-         
-    }
-}
+    
+ 
+   } 
 
 @media (max-width:500px){
-    .main{
-        padding-bottom:0 ;
+    
+    .oval{
+      top: 670px;
     }
-    .main h1{
-        font-size: 1.7 5rem;
-    }
-    .main br {
-        display: none;
-
-    }
-    .main p, h3{
-        font-size: 1.12rem;
-    }
+    
+  .main{
+    margin-top: 0;
+    padding-top: 75px;
+  }
+   
     /* .navbar{
         margin: 0;
         padding: 20px 15px;
     } */
 
-    #backimg{
-        height: 485px;
-    }
+    /* #backimg{
+        height: 717px;
+    } */
     /* .logo{
         width: 88px;
 
     } */
     .navbar #ilanguage{
         width: 100px;
-        height: 28px;
+       
     }
     /* .signin {
         width: 60px;
@@ -226,11 +202,69 @@ h3{
     
 }
 
+@media (max-width:640px) {
+  .oval{
+    top:520px;
+  }
+  .main{
+    margin-top: 0;
+  } 
+}
+
+@media (max-width:465px){
+  .oval{
+    top: 540px;
+  }
+  .main{
+    margin-top: 0;
+    padding-top: 50px;
+  }
+}
+
+@media (max-width:428px){
+  .oval{
+    top: 580px;
+  }
+}
+@media (max-width:371px){
+  .oval{
+    top: 635px;
+  }
+  .headings{
+    padding-left:0;
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (max-width:340px){
+  .oval{
+    top: 660px;
+  }}
+@media (max-width:314px){
+  .oval{
+    top: 727px;
+  }
+
+  }
+@media (max-width:256px){
+  .oval{
+    top: 780px;
+  }}
+@media (max-width:250px){
+  .oval{
+    top: 800px;
+  }}
+@media (max-width:241px){
+  .oval{
+    top: 842px;
+  }}
+
 
 
 
 .oval {
     position: absolute;
+  
     bottom: -7%; /* Pulls it halfway down into the next section */
     width: 100%;   /* Make it wider than 100% to ensure the curve looks natural */
       /* Center the oversized width */
@@ -252,9 +286,10 @@ h3{
 
 
 .containerdown{
+   
     z-index: 11;
     width: 100%;
-  
+    box-sizing: border-box;
     /* This creates the 'light' in the center and darkness at the edges */
     background: radial-gradient(
         circle at 47% 10%, 
@@ -264,7 +299,7 @@ h3{
     );
     position: relative;
     overflow: hidden;
-    bottom: 27px;
+   
 }
 
 .Tv{
@@ -334,8 +369,9 @@ h2{
 
 
 .headings{
-  margin-left: 10px;
+  padding-left:10px;
   font-size:xx-large;
+  
 }
 
 .slider-wrapper {
@@ -442,43 +478,7 @@ h2{
   }
 }
 
-@media (max-width: 600px) {
-  :root {
-    --card-width: 130px;
-    --gap: 25px;
-  }
 
-  .trending-container {
-    padding: 20px;
-  }
-
-  /* On mobile, we often want native touch scrolling instead of buttons */
-  .slider-wrapper {
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .image-track {
-    gap: var(--gap);
-    padding-left: 20px; /* Gives the first number some room */
-  }
-
-  .nav-btn {
-    display: none !important; /* Hide buttons on small touch devices */
-  }
-
-  .rank-number {
-    font-size: 60px;
-    left: -15px;
-    -webkit-text-stroke: 1px #555;
-  }
-  
-  /* Reduce scale on mobile to prevent overlapping issues on small screens */
-  .card:hover {
-    transform: scale(1.05);
-  }
-}
     
 .reasons-container{
    margin: 0 140px;
@@ -494,6 +494,7 @@ h2{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
+    justify-content: center;                                                          
 }
 .join_card {
   /* The base is dark blue/black, with a reddish-pink glow from the bottom right */
@@ -585,7 +586,10 @@ h2{
 }
 
 .plus-icon {
-  font-size: 2rem;
+  box-sizing: border-box;
+  flex-shrink:0 ;
+  min-height: 20px;
+  min-width: 20px;
   transition: transform 0.3s;
 }
 
@@ -751,8 +755,10 @@ footer{
  background-color: #050505;
 gap: 25px;
 }
-
 }
+
+
+
 
  a {
   font-size: 14px;
@@ -766,17 +772,17 @@ gap: 25px;
 }
 
 .cta-container {
-  display: flex;
-  gap: 17px;
-  max-width: 1000px;
-  justify-content: center;
-  align-items: center;
-  
+    display: flex;
+    gap: 10px;
+   justify-content: center;
+    margin: 20px auto;
+    flex-wrap: wrap; /* Allows stacking on mobile */
+    z-index: -10;
 }
 
 .input-group {
   position: relative;
-  /* flex: 1;  */
+  flex: 1; 
  width: 100%;
 
 }
@@ -786,24 +792,29 @@ gap: 25px;
   padding: 25px 10px 10px 10px; /* Added more top padding for the label */
   background: rgba(0, 0, 0, 0.7);
   border: 1px solid #808080;
+  min-width: 100px;
   color: white;
   font-size: 16px;
   border-radius: 4px;
   outline: none;
-
   box-sizing: border-box; /* Keeps padding inside the width */
 }
 
-.emailbox {
-  display: flex;
-  flex: 1; /* This lets it grow to fill available space */
-  min-width: 450px; /* Set your desired width here */
-  border: 2px solid transparent; 
-  padding: 1px;
-  border-radius: 4px;
-  box-sizing: border-box;
-  transition: border-color 0.2s;
-  flex-shrink: 1;
+/* 1. Ensure the base container has a standard border */
+.input-group {
+  
+    transition: box-shadow 0.2s ease-in-out; /* Smoothly animate the shadow */
+    padding: 3px;
+    border-radius: 4px;
+   flex: 1;
+   
+}
+
+/* 2. Add the 'outside' border using box-shadow on focus */
+.input-group:focus-within {
+    border-color: white; /* Changes the inner actual border */
+    box-shadow: 0 0 0 2px white; /* Adds a 2px "outer border" without layout shift */
+    outline: none; /* Removes the default browser blue ring */
 }
 
 
@@ -848,8 +859,4 @@ gap: 25px;
   flex-shrink: 0; /* Keeps button size stable */
   display: flex;
   align-items: center;
-}
-.emailbox {
-  border: 2px solid transparent; /* Reserve the space so it doesn't jump */
-  transition: border-color 0.2s;
 }
