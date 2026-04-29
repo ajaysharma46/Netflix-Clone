@@ -258,6 +258,14 @@ h3{
   .oval{
     top: 842px;
   }}
+@media (max-width:371px){
+ 
+  .navbar{
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+  
+  }
 
 
 
