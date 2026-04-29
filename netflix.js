@@ -4,31 +4,29 @@ function slide(direction) {
     const track = document.getElementById('track');
     const wrapper = document.querySelector('.slider-wrapper');
     const card = document.querySelector('.card');
-    
+    if (!card) return;
+
     const style = window.getComputedStyle(track);
     const gap = parseInt(style.gap) || 15;
     const cardTotalWidth = card.offsetWidth + gap;
-
-    // Calculate how many full cards can fit in the view
-    const visibleCards = Math.floor(wrapper.offsetWidth / cardTotalWidth);
-    const moveAmount = cardTotalWidth * visibleCards;
     
-    // Max scroll limit (total width of track - visible width)
-    const maxScroll = -(track.scrollWidth - wrapper.offsetWidth + 60);
+    // Ensure at least 1 card is considered visible to prevent 0-multiplication
+    const visibleCards = Math.max(1, Math.floor(wrapper.offsetWidth / cardTotalWidth));
+    const moveAmount = cardTotalWidth * visibleCards;
+
+    const maxScroll = -(track.scrollWidth - wrapper.offsetWidth);
 
     if (direction === 1) {
-        // Move Forward
         currentPosition -= moveAmount;
         if (currentPosition < maxScroll) currentPosition = maxScroll;
     } else {
-        // Move Backward
         currentPosition += moveAmount;
         if (currentPosition > 0) currentPosition = 0;
     }
 
     track.style.transform = `translateX(${currentPosition}px)`;
 
-    // Toggle Button Visibility
+    // Update button visibility
     document.querySelector('.prev-btn').style.display = currentPosition === 0 ? 'none' : 'block';
     document.querySelector('.next-btn').style.display = currentPosition <= maxScroll ? 'none' : 'block';
 }
@@ -48,17 +46,4 @@ accordionHeaders.forEach(header => {
 
     item.classList.toggle('active');
   });
-});
-
-const emailInput = document.querySelector("#email");
-const emailBox = document.querySelector(".emailbox");
-
-// When the user clicks into the input
-emailInput.addEventListener("focus", function() {
-  emailBox.style.borderColor = "white";
-});
-
-// When the user clicks away
-emailInput.addEventListener("blur", function() {
-  emailBox.style.borderColor = "transparent"; // or your original gray
 });
