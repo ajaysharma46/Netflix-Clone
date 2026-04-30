@@ -6,8 +6,8 @@ A fully responsive **Netflix Clone** built using modern web technologies. This p
 
 ## 🚀 Live Demo
 
-👉 [https://ajay-netflix-clone.vercel.app/](#)
-*(Replace with your deployed link)*
+👉 https://ajay-netflix-clone.vercel.app/
+
 
 ---
 
