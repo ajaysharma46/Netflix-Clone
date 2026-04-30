@@ -67,7 +67,7 @@ Netflix-Clone/
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/netflix-clone.git
+git clone https://github.com/ajaysharma46/netflix-clone.git
 ```
 
 2. Navigate to the project folder:
@@ -82,10 +82,6 @@ cd netflix-clone
 
 ## 🌐 Deployment
 
-You can deploy this project using:
-
-* GitHub Pages
-* Netlify
 * Vercel
 
 ---
