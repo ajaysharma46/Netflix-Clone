@@ -146,31 +146,69 @@ h3{
 
 
 .oval{
-  top: 0px;
+  top: 0%;
 }
+.ovalpar{
+  overflow: hidden;
+
+}
+.oval {
+    position: absolute;
+    bottom: -7%; /* Pulls it halfway down into the next section */
+    width: 100%;   /* Make it wider than 100% to ensure the curve looks natural */
+      /* Center the oversized width */
+    height: 87px;
+ background: radial-gradient(
+        circle at 47% , 
+        #111832 0%,    /* Light blue in the very center */
+        #05060a 110%,   /* Fading to your dark color */
+        #000000 0%   /* Deep black at the very corners */
+    );
+    
+    border-radius: 50%;
+    border-top: 4px solid #d62976;
+   
+    box-shadow: 0px -5px 15px rgba(214, 41, 118, 0.3);
+   
+    z-index: 10;   /* Keeps it above the background */
+}
+
 
  @media (max-width: 1450px){
 
     .oval{
-      top: 520px;
+      top: 87%;
     }
 } 
-
+@media (max-width:1075px){
+  .oval{
+    top: 102%;
+  }
+}
  @media (max-width: 950px) {
     .main h1 {
         font-size: 2.5rem;
     }
      .oval{
-      top: 500px;
+      top: 97%;
     }
     
  
-   } 
-
-@media (max-width:500px){
+  } 
+  
+  
+  @media (max-width:640px) {
+    .oval{
+      top:100%;
+    }
+    .main{
+      margin-top: 0;
+    } 
+  }
+  @media (max-width:500px){
     
     .oval{
-      top: 670px;
+      top: 100%;
     }
     
   .main{
@@ -202,18 +240,9 @@ h3{
     
 }
 
-@media (max-width:640px) {
-  .oval{
-    top:520px;
-  }
-  .main{
-    margin-top: 0;
-  } 
-}
-
 @media (max-width:465px){
   .oval{
-    top: 540px;
+    top: 106%;
   }
   .main{
     margin-top: 0;
@@ -223,12 +252,18 @@ h3{
 
 @media (max-width:428px){
   .oval{
-    top: 580px;
+    top: 113%;
   }
 }
+
 @media (max-width:371px){
   .oval{
-    top: 635px;
+    top: 124%;
+  }
+   .navbar{
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
   }
   .headings{
     padding-left:0;
@@ -238,59 +273,30 @@ h3{
 }
 @media (max-width:340px){
   .oval{
-    top: 660px;
+    top: 129%;
   }}
 @media (max-width:314px){
   .oval{
-    top: 727px;
+    top: 141.5%;
   }
 
   }
 @media (max-width:256px){
   .oval{
-    top: 780px;
+    top: 152.5%;
   }}
 @media (max-width:250px){
   .oval{
-    top: 800px;
+    top: 157%;
   }}
 @media (max-width:241px){
   .oval{
-    top: 842px;
+    top: 164%;
   }}
-@media (max-width:371px){
- 
-  .navbar{
-    padding-top: 10px;
-    display: flex;
-    justify-content: center;
-  }
-  }
 
 
 
 
-.oval {
-    position: absolute;
-    
-    bottom: -7%; /* Pulls it halfway down into the next section */
-    width: 100vw;   /* Make it wider than 100% to ensure the curve looks natural */
-      /* Center the oversized width */
-    height: 87px;
- background: radial-gradient(
-        circle at 47% , 
-        #111832 0%,    /* Light blue in the very center */
-        #05060a 110%,   /* Fading to your dark color */
-        #000000 0%   /* Deep black at the very corners */
-    );
-    
-    border-radius: 50%;
-    border-top: 4px solid #d62976;
-   
-    box-shadow: 0px -5px 15px rgba(214, 41, 118, 0.3);
-   
-    z-index: 10;   /* Keeps it above the background */
-}
 
 
 .containerdown{
