@@ -146,7 +146,7 @@ h3{
 
 
 .oval{
-  top: 0%;
+  top: 100%;
 }
 .ovalpar{
   overflow: hidden;
@@ -154,7 +154,7 @@ h3{
 }
 .oval {
     position: absolute;
-    bottom: -7%; /* Pulls it halfway down into the next section */
+     /* Pulls it halfway down into the next section */
     width: 100%;   /* Make it wider than 100% to ensure the curve looks natural */
       /* Center the oversized width */
     height: 87px;
