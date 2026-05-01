@@ -58,15 +58,93 @@ option {
     background-color: grey;
 }
 
-.signin{
-    background-color:#e50914;
-    font-size: 1rem;
-    padding: 0 20px;
-    border-radius: 5px;
-    color:white;
-    height: 40px;
-}
 
+ .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 4%; /* Matches the spacing in Screenshot_20260430-181525.jpg */
+            width: 100%;
+            flex-wrap: wrap;
+        }
+
+        /* Logo sizing - Fixed height is safer for mobile than vw */
+        .logo img {
+            height: 32px;
+            display: block;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 12px; /* Space between Lang and Sign Out */
+        }
+
+        /* The Language Container */
+        .lang-wrapper {
+            position: relative;
+            background: rgba(0, 0, 0, 0.6);
+            border: 1px solid #777;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 34px; /* Fixed height to prevent mobile stretching */
+            padding: 0 10px;
+            min-width: 60px;
+        }
+
+        .lang-visual {
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .lang-visual span {
+            font-size: 14px; /* Icon size */
+            font-weight: bold;
+        }
+
+        .lang-visual::after {
+            content: '▼';
+            font-size: 8px;
+            margin-top: 2px;
+        }
+
+        /* Hidden Select Overlay */
+        .lang-select {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        /* Sign Out Button */
+        .signout-btn {
+            background-color: #e50914;
+            color: white;
+            border: none;
+            padding: 0 15px;
+            border-radius: 4px;
+            font-weight: 500;
+            font-size: 14px;
+            height: 34px; /* Match height with lang-wrapper */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            
+        }
+
+        /* MOBILE FIXES */
+     
 .main {
     text-align: center;
     padding: 75px 20px;
@@ -177,34 +255,55 @@ h3{
  @media (max-width: 1450px){
 
     .oval{
-      top: 520px;
+      top: 87%;
     }
 } 
-
+@media (max-width:1075px){
+  .oval{
+    top: 102%;
+  }
+}
  @media (max-width: 950px) {
     .main h1 {
         font-size: 2.5rem;
     }
      .oval{
-      top: 500px;
+      top: 97%;
     }
     
  
-   } 
-
-@media (max-width:640px) {
-  .oval{
-    top:520px;
-  }
-  .main{
-    margin-top: 0;
   } 
-}
+  
+  
+  @media (max-width:640px) {
+    .oval{
+      top:100%;
+    }
+    .main{
+      margin-top: 0;
+    } 
+  }
 
-@media (max-width:500px){
+     @media (max-width: 600px) {
+            .navbar {
+                padding: 15px 4%;
+            }
+            .logo img {
+                height: 24px; /* Smaller logo for mobile */
+            }
+            .lang-wrapper, .signout-btn {
+                height: 30px; /* Slightly shorter buttons on mobile */
+                padding: 0 8px;
+            }
+            .lang-visual span, .signout-btn {
+                font-size: 13px;
+            }
+        }
+        
+  @media (max-width:500px){
     
     .oval{
-      top: 670px;
+      top: 100%;
     }
     
   .main{
@@ -236,11 +335,9 @@ h3{
     
 }
 
-
-
 @media (max-width:465px){
   .oval{
-    top: 540px;
+    top: 106%;
   }
   .main{
     margin-top: 0;
@@ -249,15 +346,19 @@ h3{
 }
 
 @media (max-width:428px){
+  .oval{
+    top: 113%;
+  }
+}
 
 @media (max-width:371px){
-     .navbar{
+  .oval{
+    top: 124%;
+  }
+   .navbar{
     padding-top: 10px;
     display: flex;
     justify-content: center;
-  }
-  .oval{
-    top: 635px;
   }
   .headings{
     padding-left:0;
@@ -265,32 +366,29 @@ h3{
     justify-content: center;
   }
 }
-  .oval{
-    top: 580px;
-  }
-}
 @media (max-width:340px){
   .oval{
-    top: 660px;
+    top: 129%;
   }}
 @media (max-width:314px){
   .oval{
-    top: 727px;
+    top: 141.5%;
   }
 
   }
 @media (max-width:256px){
   .oval{
-    top: 780px;
+    top: 152.5%;
   }}
 @media (max-width:250px){
   .oval{
-    top: 800px;
+    top: 157%;
   }}
 @media (max-width:241px){
   .oval{
-    top: 842px;
+    top: 164%;
   }}
+
 
 
 
