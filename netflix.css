@@ -146,8 +146,33 @@ h3{
 
 
 .oval{
-  top: 0px;
+  top: 0%;
 }
+.ovalpar{
+  overflow: hidden;
+
+}
+.oval {
+    position: absolute;
+    bottom: -7%; /* Pulls it halfway down into the next section */
+    width: 100%;   /* Make it wider than 100% to ensure the curve looks natural */
+      /* Center the oversized width */
+    height: 87px;
+ background: radial-gradient(
+        circle at 47% , 
+        #111832 0%,    /* Light blue in the very center */
+        #05060a 110%,   /* Fading to your dark color */
+        #000000 0%   /* Deep black at the very corners */
+    );
+    
+    border-radius: 50%;
+    border-top: 4px solid #d62976;
+   
+    box-shadow: 0px -5px 15px rgba(214, 41, 118, 0.3);
+   
+    z-index: 10;   /* Keeps it above the background */
+}
+
 
  @media (max-width: 1450px){
 
@@ -166,6 +191,15 @@ h3{
     
  
    } 
+
+@media (max-width:640px) {
+  .oval{
+    top:520px;
+  }
+  .main{
+    margin-top: 0;
+  } 
+}
 
 @media (max-width:500px){
     
@@ -202,14 +236,7 @@ h3{
     
 }
 
-@media (max-width:640px) {
-  .oval{
-    top:520px;
-  }
-  .main{
-    margin-top: 0;
-  } 
-}
+
 
 @media (max-width:465px){
   .oval{
@@ -222,11 +249,13 @@ h3{
 }
 
 @media (max-width:428px){
-  .oval{
-    top: 580px;
-  }
-}
+
 @media (max-width:371px){
+     .navbar{
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+  }
   .oval{
     top: 635px;
   }
@@ -234,6 +263,10 @@ h3{
     padding-left:0;
     display: flex;
     justify-content: center;
+  }
+}
+  .oval{
+    top: 580px;
   }
 }
 @media (max-width:340px){
@@ -258,39 +291,9 @@ h3{
   .oval{
     top: 842px;
   }}
-@media (max-width:371px){
- 
-  .navbar{
-    padding-top: 10px;
-    display: flex;
-    justify-content: center;
-  }
-  }
 
 
 
-
-.oval {
-    position: absolute;
-    
-    bottom: -7%; /* Pulls it halfway down into the next section */
-    width: 100vw;   /* Make it wider than 100% to ensure the curve looks natural */
-      /* Center the oversized width */
-    height: 87px;
- background: radial-gradient(
-        circle at 47% , 
-        #111832 0%,    /* Light blue in the very center */
-        #05060a 110%,   /* Fading to your dark color */
-        #000000 0%   /* Deep black at the very corners */
-    );
-    
-    border-radius: 50%;
-    border-top: 4px solid #d62976;
-   
-    box-shadow: 0px -5px 15px rgba(214, 41, 118, 0.3);
-   
-    z-index: 10;   /* Keeps it above the background */
-}
 
 
 .containerdown{
