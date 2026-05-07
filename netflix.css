@@ -901,7 +901,7 @@ gap: 25px;
   padding: 25px 10px 10px 10px; /* Added more top padding for the label */
   background: rgba(0, 0, 0, 0.7);
   border: 1px solid #808080;
-  min-width: 100px;
+  min-width: 200px;
   color: white;
   font-size: 16px;
   border-radius: 4px;
