@@ -14,7 +14,7 @@ button{
 
 #backimg {
     background: url('netflixbg.png') no-repeat center center/cover;  
-       border-bottom: 8px solid #050505b8;
+    border-bottom: 8px solid #22222200;
 }
 body{
   background-color: #050505;
@@ -299,7 +299,7 @@ h3{
                 font-size: 13px;
             }
         }
-        
+
   @media (max-width:500px){
     
     .oval{
@@ -901,7 +901,7 @@ gap: 25px;
   padding: 25px 10px 10px 10px; /* Added more top padding for the label */
   background: rgba(0, 0, 0, 0.7);
   border: 1px solid #808080;
-  min-width: 200px;
+  min-width: 100px;
   color: white;
   font-size: 16px;
   border-radius: 4px;
